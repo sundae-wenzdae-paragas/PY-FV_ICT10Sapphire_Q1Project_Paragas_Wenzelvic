@@ -1,4 +1,4 @@
- from pyscript import display, document
+from pyscript import display, document
 
 def checkout(e): #I put def "checkout" to let pyscript know that I want it to connect to the id (id= "checkout") in my Place Order button. So, when I click the Place Order button, this will function.
 
@@ -38,15 +38,16 @@ def checkout(e): #I put def "checkout" to let pyscript know that I want it to co
     display("Total Amount:", float(total), target="output")
     #this one displays the total amount
 
-from pyscript import display, document
-
 def GenerateSKU(e):
-
     document.getElementById("output").innerHTML = ""
 
     category = document.getElementById("category").value
+    
     brand = document.getElementById("brand").value
+    
     quantity = document.getElementById("quantity").value
+
+#These variables get their respective IDs of "category" in the sku-generator.html
 
     sku = category + brand + quantity
 
