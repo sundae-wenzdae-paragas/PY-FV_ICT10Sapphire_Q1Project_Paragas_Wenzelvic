@@ -37,3 +37,17 @@ def checkout(e): #I put def "checkout" to let pyscript know that I want it to co
 
     display("Total Amount:", float(total), target="output")
     #this one displays the total amount
+
+from pyscript import display, document
+
+def GenerateSKU(e):
+
+    document.getElementById("output").innerHTML = ""
+
+    category = document.getElementById("category").value
+    brand = document.getElementById("brand").value
+    quantity = document.getElementById("quantity").value
+
+    sku = category + brand + quantity
+
+    display(sku, target="output")
