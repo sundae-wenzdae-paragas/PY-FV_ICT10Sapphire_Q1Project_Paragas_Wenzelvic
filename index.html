@@ -11,14 +11,56 @@
 
     <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script> 
 
+<style>
+    body{
+        background-image:url(https://www.kingarthurbaking.com/sites/default/files/styles/featured_image_sm/public/2024-11/Personal-Pan-Pizzas_Hero1_HOR_BOTW_058.jpg?itok=2eX-_x8j);
+        background-repeat:no-repeat;
+        background-size: cover;
+    margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+        background-color: rgb(174, 87, 47);
+        padding: 15px;
+        text-align: right;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-weight: bold;
+    }
+
+    .navbar a:hover {
+        text-decoration: underline;
+    }
+
+    .container {
+        background-color: bisque;
+        width: 400px;
+        margin: 40px auto;
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+    }
+</style>
+
+
 </head>
 <body>
 
 <py-script src="main.py"></py-script>
 
+<nav class="navbar">
+    <a href="index.html">Receipt Generator</a>
+    <a href="sku.html">SKU Generator</a>
+</nav>
+
 <div class="container text-center">
-        
-<h1>Obmc Pizzeria</h1>
+
+<h1><strong>Obmc Pizzeria</strong></h1>
 <h4>We only sell whole pizzas!</h4>
 
     <input type="checkbox" id="order1"> <label>Pepperoni Pizza</label><br>
@@ -34,7 +76,7 @@
 
     <input type="checkbox" id="order6"> <label>Hawaiian Pizza</label><br>
 
-    <button type="submit" py-click="checkout">Place Order</button>
+    <button type="submit" py-click="checkout" style="margin-top:20px;">Place Order</button>
 <!--
     py-click="checkout" connects to def checkout(e) through <py-script src="main.py"></py-script>
     -->
